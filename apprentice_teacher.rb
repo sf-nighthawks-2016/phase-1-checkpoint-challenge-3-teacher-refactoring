@@ -1,4 +1,7 @@
-class ApprenticeTeacher
+require_relative 'people'
+require_relative 'get_paid'
+
+class ApprenticeTeacher < People
   attr_reader :age, :salary, :phase, :target_raise
   attr_accessor :name
 
@@ -9,14 +12,7 @@ class ApprenticeTeacher
     @phase = 3
   end
 
-  def offer_high_five
-    "High five!"
-  end
-
-  def set_phase(num)
-    @phase = num
-    "Cool, I've always wanted to teach phase #{num}!"
-  end
+  include Get_paid
 
   def teach_stuff
     response = ""
@@ -24,15 +20,6 @@ class ApprenticeTeacher
     response += "*drops crazy knowledge bomb* "
     response += "... You're welcome."
     response
-  end
-
-  def salary=(new_salary)
-    puts "This better be good!"
-    @salary = new_salary
-  end
-
-  def receive_raise(raise)
-    @salary += raise
   end
 
   def set_performance_rating(rating)
