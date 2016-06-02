@@ -4,6 +4,7 @@ class Instructor
 
   PHASE = 3
   # TARGET_RAISE = 800
+  # not sure why this won't work
   RATING = 80
 
   def initialize(options={})

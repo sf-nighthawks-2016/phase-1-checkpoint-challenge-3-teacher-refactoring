@@ -4,6 +4,7 @@ include Phaseable
 
 class ApprenticeTeacher < Instructor
   # TARGET_RAISE = 800
+  # not sure why this won't work
   def initialize(options={}) 
     super()
     @target_raise = 800

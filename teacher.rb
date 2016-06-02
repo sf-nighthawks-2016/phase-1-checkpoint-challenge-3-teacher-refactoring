@@ -6,6 +6,7 @@ class Teacher < Instructor
   attr_reader :performance_rating
   RATING = 90
   # TARGET_RAISE = 1000
+  # not sure why this won't work
   def initialize(options={})
     super()
     @target_raise = 1000
