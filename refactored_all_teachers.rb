@@ -1,7 +1,7 @@
 require_relative 'school'
 
 class AllTeachers < School
-  attr_accessor :name
+  attr_reader :salary, :target_raise
 
   def set_phase(num)
     @phase = num

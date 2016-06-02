@@ -1,8 +1,7 @@
 require_relative 'school'
 
 class Student < School
-  attr_reader :age, :phase
-  attr_accessor :name
+  # attr_reader :age, :phase
 
   def initialize(options = {})
     super
