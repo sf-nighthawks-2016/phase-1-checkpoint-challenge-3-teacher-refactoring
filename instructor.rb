@@ -3,14 +3,14 @@ class Instructor
   attr_accessor :name
 
   PHASE = 3
-  TARGET_RAISE = 800
+  # TARGET_RAISE = 800
   RATING = 80
 
   def initialize(options={})
     @phase = PHASE
     @age = options.fetch(:age, 0)
     @name = options.fetch(:name, "")
-    @target_raise = TARGET_RAISE
+    # @target_raise = TARGET_RAISE
   end
 
   def teach_stuff

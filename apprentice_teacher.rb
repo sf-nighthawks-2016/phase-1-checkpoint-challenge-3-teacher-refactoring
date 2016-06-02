@@ -3,9 +3,10 @@ require_relative 'phaseable'
 include Phaseable
 
 class ApprenticeTeacher < Instructor
-  TARGET_RAISE = 800
+  # TARGET_RAISE = 800
   def initialize(options={}) 
     super()
+    @target_raise = 800
   end
 
   def attend_training_session

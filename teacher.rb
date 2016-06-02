@@ -5,9 +5,10 @@ include Phaseable
 class Teacher < Instructor
   attr_reader :performance_rating
   RATING = 90
-  TARGET_RAISE = 1000
+  # TARGET_RAISE = 1000
   def initialize(options={})
     super()
+    @target_raise = 1000
   end
 
   def teach_stuff
