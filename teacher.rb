@@ -5,10 +5,9 @@ class Teacher < People
   attr_reader :salary, :phase, :performance_rating, :target_raise
 
   def initialize(options={})
-    @phase = 3
-    @age = options.fetch(:age, 0)
-    @name = options.fetch(:name, "")
+    super
     @target_raise = 1000
+    @phase = 3
   end
 
   include Get_paid

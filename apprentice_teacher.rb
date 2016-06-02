@@ -5,8 +5,7 @@ class ApprenticeTeacher < People
   attr_reader :salary, :phase, :target_raise
 
   def initialize(options={})
-    @age = options.fetch(:age, 0)
-    @name = options.fetch(:name, "")
+    super
     @target_raise = 800
     @phase = 3
   end
