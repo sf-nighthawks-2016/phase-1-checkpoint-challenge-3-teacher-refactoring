@@ -6,7 +6,6 @@ class ApprenticeTeacher < Teacher
     super
     @target_raise = 800
     @phase = 3
-    @performance_rating = 0
   end
 
   def teach_stuff
@@ -17,17 +16,8 @@ class ApprenticeTeacher < Teacher
     response
   end
 
-  def salary=(new_salary)
-    puts "This better be good!"
-    @salary = new_salary
-  end
-
-  def receive_raise(raise)
-    @salary += raise
-  end
-
   def set_performance_rating(rating)
-    @performance_rating = rating
+    # @performance_rating = rating
     response = ""
     if rating > 80
       response = "Yay, I'm a great employee!"
@@ -36,6 +26,10 @@ class ApprenticeTeacher < Teacher
       response = "Oh, well -- thanks to this actionable, specific, and kind feedback, I'll do better next time."
     end
     response
+  end
+
+  def send(p_rating)
+    raise NoMethodError
   end
 
   def attend_training_session
