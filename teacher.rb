@@ -1,4 +1,7 @@
-class Teacher
+require_relative 'school_class'
+
+
+class Teacher < School
   attr_reader :age, :salary, :phase, :performance_rating, :target_raise
   attr_accessor :name
 

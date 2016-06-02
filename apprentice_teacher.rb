@@ -1,4 +1,6 @@
-class ApprenticeTeacher
+require_relative 'school_class'
+
+class ApprenticeTeacher < School
   attr_reader :age, :salary, :phase, :target_raise
   attr_accessor :name
 
