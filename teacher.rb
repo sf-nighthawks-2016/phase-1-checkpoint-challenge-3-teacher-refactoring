@@ -9,6 +9,7 @@ class Teacher < Employee
     @target_raise = 1000
   end
 
+  include Schoolable
 
 
   def teach_stuff

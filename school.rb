@@ -8,9 +8,6 @@ class Employee
     @phase = 3
   end
 
-  def offer_high_five
-    "High five!"
-  end
 
   def set_phase(num)
     @phase = num
@@ -48,6 +45,9 @@ class Employee
 end
 
 
-module School
+module Schoolable
+  def offer_high_five
+    "High five!"
+  end
 
 end
