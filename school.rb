@@ -2,6 +2,7 @@ class School
 attr_reader :age, :salary, :phase, :target_raise
 attr_accessor :name
 
+
   def offer_high_five
     "High five!"
   end
