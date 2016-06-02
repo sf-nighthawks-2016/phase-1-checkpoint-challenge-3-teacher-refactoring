@@ -1,4 +1,5 @@
-require_relative 'school', 'teach_module'
+require_relative 'school'
+require_relative 'teach_module'
 
 class ApprenticeTeacher
   attr_reader :age, :salary, :phase, :target_raise
