@@ -49,3 +49,9 @@ class Teacher < Instructors
     response
   end
 end
+
+new_teacher = Teacher.new
+
+p new_teacher
+
+p new_teacher.age

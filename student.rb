@@ -1,13 +1,14 @@
 require_relative 'People'
 
-class Student
+class Student < People
+
   attr_reader :age, :phase
   attr_accessor :name
 
   def initialize(options = {})
     @phase = 1
-    super(age)
-    super(name)
+    #super(age)
+    #super(name)
   end
 
   #def offer_high_five
@@ -33,3 +34,5 @@ class Student
     response
   end
 end
+
+#new_student

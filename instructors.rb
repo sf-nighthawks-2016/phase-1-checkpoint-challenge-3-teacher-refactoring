@@ -7,8 +7,6 @@ class Instructors < People
 
   def initialize(options = {})
     @phase = 3
-    super(age)
-    super(name)
     @target_raise = options.fetch(:target_raise, 0)
   end
 
