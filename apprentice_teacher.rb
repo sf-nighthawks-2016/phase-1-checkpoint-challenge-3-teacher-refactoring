@@ -6,17 +6,11 @@ class ApprenticeTeacher < Staff
     super
     @target_raise = 800
     @performance_rating_threshold = 80
-  end
-
-  def teach_stuff
-    response = ""
-    response += "Listen, class, this is how everything works. "
-    response += "*drops crazy knowledge bomb* "
-    response += "... You're welcome."
-    response
+    @response_style = 'confident'
   end
 
   def attend_training_session
     puts "Whoa. I know ruby-fu"
   end
+
 end

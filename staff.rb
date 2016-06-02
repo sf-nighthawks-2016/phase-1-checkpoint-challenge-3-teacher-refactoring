@@ -2,7 +2,7 @@ require_relative 'person'
 
 class Staff < Person
 
-  attr_reader :salary, :target_raise, :performance_rating_threshold
+  attr_reader :salary, :target_raise, :performance_rating_threshold, :response_style
 
   def initialize(options={})
     super
@@ -30,6 +30,20 @@ class Staff < Person
       response = "Yay, I'm a great employee!"
     else
       response = "Oh, well -- thanks to this actionable, specific, and kind feedback, I'll do better next time."
+    end
+    response
+  end
+
+  def teach_stuff
+    response = ""
+    if @response_style == 'sassy'
+      response += "Listen, class, this is how everything works, fo SHO! "
+      response += "*drops flat-out insane knowledge bomb* "
+      response += "... You're welcome. *saunters away*"
+    elsif @response_style == 'confident'
+      response += "Listen, class, this is how everything works. "
+      response += "*drops crazy knowledge bomb* "
+      response += "... You're welcome."
     end
     response
   end
