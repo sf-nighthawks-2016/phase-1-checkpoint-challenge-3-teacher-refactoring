@@ -1,22 +1,18 @@
-class Teacher
-  attr_reader :age, :salary, :phase, :performance_rating, :target_raise
-  attr_accessor :name
+require_relative 'funables'
+require_relative 'person'
+require_relative 'teachables'
+require_relative 'moneyables'
 
+class Teacher < Person
+  attr_reader  :salary, :performance_rating, :target_raise
+  
   def initialize(options={})
+    super
     @phase = 3
-    @age = options.fetch(:age, 0)
-    @name = options.fetch(:name, "")
     @target_raise = 1000
   end
 
-  def offer_high_five
-    "High five!"
-  end
-
-  def set_phase(num)
-    @phase = num
-    "Cool, I've always wanted to teach phase #{num}!"
-  end
+  include Funables, Teachables, Moneyables
 
   def teach_stuff
     response = ""
@@ -24,15 +20,6 @@ class Teacher
     response += "*drops flat-out insane knowledge bomb* "
     response += "... You're welcome. *saunters away*"
     response
-  end
-
-  def salary=(new_salary)
-    puts "This better be good!"
-    @salary = new_salary
-  end
-
-  def receive_raise(raise)
-    @salary += raise
   end
 
   def set_performance_rating(rating)
