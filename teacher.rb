@@ -1,13 +1,14 @@
 require_relative 'Instructors'
 
 class Teacher < Instructors
-  attr_reader :age, :salary, :phase, :performance_rating, :target_raise
-  attr_accessor :name
+  attr_reader  :salary, :performance_rating, :target_raise
+  attr_accessor :age, :name, :phase
 
-  def initialize(options={})
+  def initialize(option = {})
     #@phase = 3
-
     #@name = options.fetch(:name, "")
+    super
+    @performance_rating = 0
     @target_raise = 1000
   end
 

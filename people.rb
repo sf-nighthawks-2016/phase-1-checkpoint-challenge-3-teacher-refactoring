@@ -1,7 +1,7 @@
 class People
 
-  attr_reader :age, :phase
-  attr_accessor :name
+
+  attr_accessor :age, :name, :phase
 
   def initialize(options = {})
     @phase = options.fetch(:phase, 0)

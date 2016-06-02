@@ -1,11 +1,12 @@
 require_relative 'Instructors'
 
 class ApprenticeTeacher < Instructors
-  attr_reader :age, :salary, :phase, :target_raise
-  attr_accessor :name
+  attr_reader :salary, :target_raise
+  attr_accessor :name, :age, :phase
 
-  def initialize(options={})
-     #@phase = 3
+  def initialize(options = {})
+    super
+
     @target_raise = 800
   end
 
