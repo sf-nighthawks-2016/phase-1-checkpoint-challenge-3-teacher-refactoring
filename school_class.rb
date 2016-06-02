@@ -10,7 +10,8 @@
   # offer_high_five
   # set_phase => Note this brings up an error since the response is different between teachers and stu
 
-# Don't forget about CONSTANTS yo... => TEACHER_MAX_HEATH = 100 => self.class::TEACHER_MAX_HEALTH
+# Don't forget about CONSTANTS! => TEACHER_MAX_HEATH = 100 => self.class::TEACHER_MAX_HEALTH
+# You ran out of time and didn't include constants => do later!
 
 class School
   attr_reader :age, :phase
@@ -19,7 +20,6 @@ class School
   def initialize(options = {})
     @age = options.fetch(:age, 0)
     @name = options.fetch(:name, "")
-    @phase = 1
   end
 
   def offer_high_five

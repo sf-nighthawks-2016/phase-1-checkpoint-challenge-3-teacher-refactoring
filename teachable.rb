@@ -3,7 +3,6 @@
   # salary=(new_salary)
   # receive_raise(raise)
 
-
 module Teachable
 
   def salary=(new_salary)

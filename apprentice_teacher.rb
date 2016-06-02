@@ -25,12 +25,9 @@ class ApprenticeTeacher < School
     response
   end
 
-
-
-
   def set_performance_rating(rating)
     response = ""
-    if rating > 80
+    if rating > 80         # This might be able to initialized through a constant for refactoring... to update later
       response = "Yay, I'm a great employee!"
       receive_raise(@target_raise)
     else

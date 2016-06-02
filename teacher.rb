@@ -14,7 +14,7 @@ class Teacher < School
     @target_raise = 1000
   end
 
-  # note the SET_PHASE and TEACH_STUFF method is slightly different so they cant be refactored? or can they...?
+  # note the SET_PHASE and TEACH_STUFF method are slightly different so they cant be refactored? or can they...?
 
   def set_phase(num)
     @phase = num
@@ -25,7 +25,7 @@ class Teacher < School
     response = ""
     response += "Listen, class, this is how everything works, fo SHO! "
     response += "*drops flat-out insane knowledge bomb* "
-    response += "... You're welcome. *saunters away*"   # The responses were slightly different, but still passes
+    response += "... You're welcome. *saunters away*"       # The responses were slightly different, and IF / ELSE state with the self.class == 'Teacher' might be a good refactor!
     response
   end
 
