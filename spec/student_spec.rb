@@ -2,6 +2,7 @@ require_relative '../student'
 
 describe Student do
   let(:amir) { Student.new({name: "Amir Fayek", age: 21}) }
+  let(:default_student) { Student.new }
 
   it "offers high fives" do
     expect(amir.offer_high_five).to eq("High five!")
@@ -40,4 +41,10 @@ describe Student do
     amir.name = "Mama Bear"
     expect(amir.name).to eq("Mama Bear")
   end
+
+  #  describe "default behavior" do
+  #   it "fills in '' for name" do
+  #     expect(default_student.name).to eq('')
+  #   end
+  # end
 end
