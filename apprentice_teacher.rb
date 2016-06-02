@@ -1,11 +1,10 @@
 require_relative 'teacher'
 
 class ApprenticeTeacher < Teacher
-  PHASE_DEFAULT = 3
   TARGET_RAISE_DEFAULT = 800
   RATING_TARGET = 80
 
-  # remove_method :performance_rating
+  undef_method :performance_rating
 
   def teach_stuff
     response = ""
