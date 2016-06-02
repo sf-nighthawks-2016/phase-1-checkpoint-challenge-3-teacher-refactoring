@@ -1,6 +1,6 @@
 require_relative 'refactored_all_teachers'
 
-class Teacher < SuperTeachers
+class Teacher < AllTeachers
   attr_reader :age, :salary, :phase, :performance_rating, :target_raise
 
   def initialize(options={})

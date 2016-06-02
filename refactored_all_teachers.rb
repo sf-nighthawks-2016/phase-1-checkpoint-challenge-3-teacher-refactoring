@@ -1,6 +1,6 @@
 require_relative 'school'
 
-class SuperTeachers < School
+class AllTeachers < School
   attr_accessor :name
 
   def set_phase(num)
