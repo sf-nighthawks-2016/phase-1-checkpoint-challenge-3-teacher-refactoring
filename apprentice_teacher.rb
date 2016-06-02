@@ -1,4 +1,7 @@
-class ApprenticeTeacher
+require_relative 'dbc'
+require_relative 'employee'
+
+class ApprenticeTeacher < Employee
   attr_reader :age, :salary, :phase, :target_raise
   attr_accessor :name
 
@@ -9,9 +12,6 @@ class ApprenticeTeacher
     @phase = 3
   end
 
-  def offer_high_five
-    "High five!"
-  end
 
   def set_phase(num)
     @phase = num
@@ -26,14 +26,6 @@ class ApprenticeTeacher
     response
   end
 
-  def salary=(new_salary)
-    puts "This better be good!"
-    @salary = new_salary
-  end
-
-  def receive_raise(raise)
-    @salary += raise
-  end
 
   def set_performance_rating(rating)
     response = ""
