@@ -1,11 +1,11 @@
 module Teachable
-  # def teach_stuff
-  #   response = ""
-  #   response += "Listen, class, this is how everything works. "
-  #   response += "*drops crazy knowledge bomb* "
-  #   response += "... You're welcome."
-  #   response
-  # end
+
+  def initialize(options={})
+    @phase = self.class::STARTING_PHASE
+    @age = options.fetch(:age, 0)
+    @name = options.fetch(:name, "")
+    @target_raise = self.class::TARGET_RAISE
+  end
 
   def salary=(new_salary)
     puts "This better be good!"
@@ -28,12 +28,12 @@ module Teachable
     response
   end
 
+  def set_phase(num)
+    @phase = num
+    "Cool, I've always wanted to teach phase #{num}!"
+  end
+
   def teach_stuff
-    # response = ""
-    # response += "Listen, class, this is how everything works, fo SHO! "
-    # response += "*drops flat-out insane knowledge bomb* "
-    # response += "... You're welcome. *saunters away*"
-    # response
     self.class::RESPONSE
   end
 end
