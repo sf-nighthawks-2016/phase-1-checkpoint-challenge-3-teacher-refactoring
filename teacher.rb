@@ -5,8 +5,7 @@ require_relative 'moneyables'
 
 class Teacher < Person
   attr_reader  :salary, :performance_rating, :target_raise
-
-
+  
   def initialize(options={})
     super
     @phase = 3
@@ -14,7 +13,6 @@ class Teacher < Person
   end
 
   include Funables, Teachables, Moneyables
-
 
   def teach_stuff
     response = ""
