@@ -1,10 +1,10 @@
 require_relative 'person'
 require_relative 'funables'
 require_relative 'teachables'
+require_relative 'moneyables'
 
 class ApprenticeTeacher < Person
-  attr_reader :age, :salary, :phase, :target_raise
-  attr_accessor :name
+  attr_reader  :salary,  :target_raise
 
   def initialize(options={})
     super
@@ -12,13 +12,7 @@ class ApprenticeTeacher < Person
     @phase = 3
   end
 
-  include Funables, Teachables
-
-
-  # def set_phase(num)
-  #   @phase = num
-  #   "Cool, I've always wanted to teach phase #{num}!"
-  # end
+  include Funables, Teachables, Moneyables
 
   def teach_stuff
     response = ""
@@ -26,15 +20,6 @@ class ApprenticeTeacher < Person
     response += "*drops crazy knowledge bomb* "
     response += "... You're welcome."
     response
-  end
-
-  def salary=(new_salary)
-    puts "This better be good!"
-    @salary = new_salary
-  end
-
-  def receive_raise(raise)
-    @salary += raise
   end
 
   def set_performance_rating(rating)

@@ -2,8 +2,6 @@ require_relative 'funables'
 require_relative 'person'
 
 class Student < Person
-  attr_reader :age, :phase
-  attr_accessor :name
 
   def initialize(options = {})
     super
@@ -11,8 +9,7 @@ class Student < Person
   end
 
   include Funables
-
-
+  
   def set_phase(num)
     response = ""
     if num == @phase
