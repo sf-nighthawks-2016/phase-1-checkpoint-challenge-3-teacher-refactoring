@@ -9,6 +9,7 @@ class Student
     @name = options.fetch(:name, "")
   end
 
+
   include Schoolable
 
   def set_phase(num)

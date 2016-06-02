@@ -46,6 +46,7 @@ end
 
 
 module Schoolable
+
   def offer_high_five
     "High five!"
   end
