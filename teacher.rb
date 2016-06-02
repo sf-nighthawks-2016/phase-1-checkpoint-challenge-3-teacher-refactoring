@@ -1,38 +1,32 @@
-class Teacher
+require_relative 'school_class'
+require_relative 'teachable'
+
+
+
+class Teacher < School
   attr_reader :age, :salary, :phase, :performance_rating, :target_raise
   attr_accessor :name
+  include Teachable
 
   def initialize(options={})
+    super
     @phase = 3
-    @age = options.fetch(:age, 0)
-    @name = options.fetch(:name, "")
     @target_raise = 1000
   end
 
-  def offer_high_five
-    "High five!"
-  end
+  # note the SET_PHASE and TEACH_STUFF method are slightly different so they cant be refactored? or can they...?
 
   def set_phase(num)
     @phase = num
     "Cool, I've always wanted to teach phase #{num}!"
   end
 
-  def teach_stuff
+ def teach_stuff
     response = ""
     response += "Listen, class, this is how everything works, fo SHO! "
     response += "*drops flat-out insane knowledge bomb* "
-    response += "... You're welcome. *saunters away*"
+    response += "... You're welcome. *saunters away*"       # The responses were slightly different, and IF / ELSE state with the self.class == 'Teacher' might be a good refactor!
     response
-  end
-
-  def salary=(new_salary)
-    puts "This better be good!"
-    @salary = new_salary
-  end
-
-  def receive_raise(raise)
-    @salary += raise
   end
 
   def set_performance_rating(rating)
@@ -47,3 +41,4 @@ class Teacher
     response
   end
 end
+
