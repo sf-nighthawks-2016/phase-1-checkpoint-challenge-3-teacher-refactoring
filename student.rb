@@ -1,15 +1,14 @@
-class Student
+require_relative 'at_school'
+
+class Student < At_School
   attr_reader :age, :phase
   attr_accessor :name
 
-  def initialize(options = {})
-    @phase = 1
-    @age = options.fetch(:age, 0)
-    @name = options.fetch(:name, "")
-  end
+  STARTING_PHASE = 1
 
-  def offer_high_five
-    "High five!"
+  def initialize(options = {})
+    super
+    @phase = 1
   end
 
   def set_phase(num)
