@@ -1,17 +1,12 @@
 require_relative 'person'
+require_relative 'staff'
 
-class Teacher < Person
-  attr_reader :salary, :phase, :performance_rating, :target_raise
+class Teacher < Staff
+  attr_reader :performance_rating
 
   def initialize(options={})
     super
-    @phase = 3
     @target_raise = 1000
-  end
-
-  def set_phase(num)
-    @phase = num
-    "Cool, I've always wanted to teach phase #{num}!"
   end
 
   def teach_stuff
