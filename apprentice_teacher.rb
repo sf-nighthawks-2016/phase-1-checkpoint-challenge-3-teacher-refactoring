@@ -1,7 +1,6 @@
 require_relative 'refactored_all_teachers'
 
 class ApprenticeTeacher < AllTeachers
-
   def initialize(options={})
     super
     @target_raise = 800
