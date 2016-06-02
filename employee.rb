@@ -7,4 +7,9 @@ class Employee < User
     "Cool, I've always wanted to teach phase #{num}!"
   end
 
+  def salary=(new_salary)
+	puts "This better be good!"
+	@salary = new_salary
+  end
+
 end
