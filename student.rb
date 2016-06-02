@@ -7,9 +7,8 @@ class Student < At_School
   STARTING_PHASE = 1
 
   def initialize(options = {})
+    super
     @phase = 1
-    @age = options.fetch(:age, 0)
-    @name = options.fetch(:name, "")
   end
 
   def set_phase(num)

@@ -1,9 +1,8 @@
 module Teachable
 
   def initialize(options={})
+    super
     @phase = self.class::STARTING_PHASE
-    @age = options.fetch(:age, 0)
-    @name = options.fetch(:name, "")
     @target_raise = self.class::TARGET_RAISE
   end
 
