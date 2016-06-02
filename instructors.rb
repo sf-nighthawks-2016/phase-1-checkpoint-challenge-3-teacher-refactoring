@@ -2,10 +2,11 @@ require_relative 'People'
 
 class Instructors < People
 
-  attr_reader :age, :salary, :phase
-  attr_accessor :name
+  attr_reader :salary
+  attr_accessor :age, :name, :phase
 
   def initialize(options = {})
+    super
     @phase = 3
     @target_raise = options.fetch(:target_raise, 0)
   end

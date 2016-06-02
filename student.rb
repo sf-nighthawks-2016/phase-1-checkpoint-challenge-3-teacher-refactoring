@@ -5,7 +5,8 @@ class Student < People
   attr_reader :age, :phase
   attr_accessor :name
 
-  def initialize(options = {})
+  def initialize(phase)
+    super
     @phase = 1
     #super(age)
     #super(name)
