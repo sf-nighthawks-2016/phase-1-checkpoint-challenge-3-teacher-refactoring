@@ -1,4 +1,6 @@
-class Student
+require_relative 'entireschool'
+
+class Student < EntireSchool
   attr_reader :age, :phase
   attr_accessor :name
 
@@ -8,9 +10,10 @@ class Student
     @name = options.fetch(:name, "")
   end
 
-  def offer_high_five
-    "High five!"
-  end
+  # def offer_high_five
+  #   "High five!"
+  # end
+
 
   def set_phase(num)
     response = ""
@@ -24,6 +27,7 @@ class Student
     response
   end
 
+  # unique to student
   def learn_stuff
     response = ""
     response += "WHOA! I've never thought of it quite like that before. "
