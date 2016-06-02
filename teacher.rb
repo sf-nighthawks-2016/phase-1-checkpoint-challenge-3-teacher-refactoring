@@ -2,11 +2,13 @@ require_relative 'dev_bootcamper'
 
 class Teacher < DevBootcamper
   PHASE_DEFAULT = 3
+  TARGET_RAISE_DEFAULT = 1000
+  RATING_TARGET = 90
   attr_reader :salary, :performance_rating, :target_raise
 
   def initialize(options={})
     super
-    @target_raise = 1000
+    @target_raise = self.class::TARGET_RAISE_DEFAULT
   end
 
   def set_phase(num)
@@ -33,7 +35,7 @@ class Teacher < DevBootcamper
 
   def set_performance_rating(rating)
     response = ""
-    if rating > 90
+    if rating > self.class::RATING_TARGET
       receive_raise(@target_raise)
       response = "Yay, I'm a great employee!"
     else
