@@ -1,4 +1,8 @@
+require_relative 'high_five'
+
 class Student
+
+  include HighFive
   attr_reader :age, :phase
   attr_accessor :name
 
@@ -8,10 +12,6 @@ class Student
     @name = options.fetch(:name, "")
   end
 
-  def offer_high_five
-    "High five!"
-  end
-
   def set_phase(num)
     response = ""
     if num == @phase
@@ -19,9 +19,9 @@ class Student
       response += "I put my learning first. I'm gonna rock it!"
     else
       response = "Oooh, phase #{num}. I hope I'm ready!"
+      @phase = num
+      response
     end
-    @phase = num
-    response
   end
 
   def learn_stuff
