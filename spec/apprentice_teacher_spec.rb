@@ -68,7 +68,7 @@ describe ApprenticeTeacher do
     it "increases salary with a good performance review" do
       rey.salary = 1000000
       rey.set_performance_rating(85)
-      expect(rey.salary).to be(1000800)
+      expect(rey.salary).to eq(1000800)
     end
   end
 
