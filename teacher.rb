@@ -1,5 +1,9 @@
-class Teacher
+require_relative 'school'
+
+class Teacher < SchoolMembers
   attr_reader :age, :salary, :phase, :performance_rating, :target_raise
+  attr_accessor :performance_rating
+  attr_reader :target_raise
   attr_accessor :name
 
   def initialize(options={})
@@ -9,9 +13,9 @@ class Teacher
     @target_raise = 1000
   end
 
-  def offer_high_five
-    "High five!"
-  end
+  # def offer_high_five
+  #   "High five!"
+  # end
 
   def set_phase(num)
     @phase = num
@@ -26,14 +30,14 @@ class Teacher
     response
   end
 
-  def salary=(new_salary)
-    puts "This better be good!"
-    @salary = new_salary
-  end
+  # def salary=(new_salary)
+  #   puts "This better be good!"
+  #   @salary = new_salary
+  # end
 
-  def receive_raise(raise)
-    @salary += raise
-  end
+  # def receive_raise(raise)
+  #   @salary += raise
+  # end
 
   def set_performance_rating(rating)
     response = ""
