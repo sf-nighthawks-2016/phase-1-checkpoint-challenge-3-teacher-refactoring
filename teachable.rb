@@ -15,5 +15,4 @@ module Teachable
     @salary += raise
   end
 
-
 end

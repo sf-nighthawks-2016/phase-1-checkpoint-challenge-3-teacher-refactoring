@@ -5,9 +5,8 @@ class Student < School
   attr_accessor :name
 
   def initialize(options = {})
+    super
     @phase = 1
-    @age = options.fetch(:age, 0)
-    @name = options.fetch(:name, "")
   end
 
   def set_phase(num)

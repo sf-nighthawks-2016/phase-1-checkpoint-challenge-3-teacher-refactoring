@@ -7,8 +7,7 @@ class ApprenticeTeacher < School
   include Teachable
 
   def initialize(options={})
-    @age = options.fetch(:age, 0)
-    @name = options.fetch(:name, "")
+    super
     @target_raise = 800
     @phase = 3
   end
@@ -27,9 +26,7 @@ class ApprenticeTeacher < School
   end
 
 
-  def receive_raise(raise)
-    @salary += raise
-  end
+
 
   def set_performance_rating(rating)
     response = ""

@@ -9,24 +9,23 @@ class Teacher < School
   include Teachable
 
   def initialize(options={})
+    super
     @phase = 3
-    @age = options.fetch(:age, 0)
-    @name = options.fetch(:name, "")
     @target_raise = 1000
   end
 
-  # note the SET_PHASE and TEACH_STUFF method is slightly different so they cant be refactored?
+  # note the SET_PHASE and TEACH_STUFF method is slightly different so they cant be refactored? or can they...?
 
   def set_phase(num)
     @phase = num
     "Cool, I've always wanted to teach phase #{num}!"
   end
 
-  def teach_stuff
+ def teach_stuff
     response = ""
     response += "Listen, class, this is how everything works, fo SHO! "
     response += "*drops flat-out insane knowledge bomb* "
-    response += "... You're welcome. *saunters away*"
+    response += "... You're welcome. *saunters away*"   # The responses were slightly different, but still passes
     response
   end
 
@@ -42,3 +41,4 @@ class Teacher < School
     response
   end
 end
+
