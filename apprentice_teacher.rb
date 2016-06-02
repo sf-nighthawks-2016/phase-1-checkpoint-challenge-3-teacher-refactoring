@@ -2,8 +2,7 @@ require_relative 'people'
 require_relative 'get_paid'
 
 class ApprenticeTeacher < People
-  attr_reader :age, :salary, :phase, :target_raise
-  attr_accessor :name
+  attr_reader :salary, :phase, :target_raise
 
   def initialize(options={})
     @age = options.fetch(:age, 0)
