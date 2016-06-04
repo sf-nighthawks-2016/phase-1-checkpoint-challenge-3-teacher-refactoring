@@ -3,7 +3,6 @@ require_relative 'entireschool'
 class Student < EntireSchool
 
   attr_reader :age, :phase
-  attr_accessor :name
 
   PHASE = 1
   # def initialize(options = {})
