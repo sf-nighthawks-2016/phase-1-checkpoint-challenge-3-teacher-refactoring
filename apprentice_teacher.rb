@@ -1,35 +1,41 @@
 require_relative 'entireschool'
 require_relative 'faculty'
 
-class ApprenticeTeacher < Faculty
+class ApprenticeTeacher < EntireSchool
+
   attr_reader  :salary, :target_raise, :age,:phase
   attr_accessor :name
 
-  def initialize(options={})
-    @age = options.fetch(:age, 0)
-    @name = options.fetch(:name, "")
-    @target_raise = 800
-    @phase = 3
-  end
+  RATING = 80
+  PHASE = 3
+  TARGET_RAISE = 800
 
+  # def initialize(options={})
+    # @age = options.fetch(:age, 0)
+    # @name = options.fetch(:name, "")
+    # @target_raise = 800
+    # @phase = 3
+  # end
+
+  include Faculty
 
   # def offer_high_five
   #   "High five!"
   # end
 
   def set_phase(num)
-  #   @phase = num
-  #   "Cool, I've always wanted to teach phase #{num}!"
+    super
+    # @phase = num
+    # "Cool, I've always wanted to teach phase #{num}!"
   end
 
   # SB thought you need to call super here to pull methods
   def teach_stuff
-    super
-    # response = ""
+    response = ""
     response += "Listen, class, this is how everything works. "
     response += "*drops crazy knowledge bomb* "
     response += "... You're welcome."
-    # response
+    response
   end
 
 
@@ -42,21 +48,19 @@ class ApprenticeTeacher < Faculty
   #   @salary += raise
   # end
 
-  def set_performance_rating(rating)
-    # response = ""
-    if rating > 80
+  # def set_performance_rating(rating)
+  #   # response = ""
+  #   if rating > 80
       # response = "Yay, I'm a great employee!"
       # receive_raise(@target_raise)
-    else
-      response = "Oh, well -- thanks to this actionable, specific, and kind feedback, I'll do better next time."
-    end
+    # else
+    #   response = "Oh, well -- thanks to this actionable, specific, and kind feedback, I'll do better next time."
+    # end
     # response
-  end
+  # end
 
   def attend_training_session
     puts "Whoa. I know ruby-fu"
   end
 end
 
-p nelson = ApprenticeTeacher.new
-p nelson.set_phase(1)

@@ -1,12 +1,11 @@
 class EntireSchool
-  # attr_reader :age, :phase
+  attr_reader :age, :phase
 
-  # def initialize(options={})
-  #   @age = {}
-  #   @name = {}
-  #   # @target_raise = 800
-  #   @phase = {}
-  # end
+  def initialize(options={})
+    @age = options.fetch(:age, 0)
+    @name = options.fetch(:name, "")
+    @phase = self.class::PHASE
+  end
 
   def offer_high_five
     "High five!"

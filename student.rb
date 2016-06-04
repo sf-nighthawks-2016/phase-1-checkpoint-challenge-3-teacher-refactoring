@@ -1,14 +1,16 @@
 require_relative 'entireschool'
 
 class Student < EntireSchool
+
   attr_reader :age, :phase
   attr_accessor :name
 
-  def initialize(options = {})
-    @phase = 1
-    @age = options.fetch(:age, 0)
-    @name = options.fetch(:name, "")
-  end
+  PHASE = 1
+  # def initialize(options = {})
+    # @phase = 1
+    # @age = options.fetch(:age, 0)
+    # @name = options.fetch(:name, "")
+  # end
 
   # def offer_high_five
   #   "High five!"
