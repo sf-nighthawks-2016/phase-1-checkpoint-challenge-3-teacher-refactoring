@@ -1,16 +1,14 @@
-class Teacher
-  attr_reader :age, :salary, :phase, :performance_rating, :target_raise
-  attr_accessor :name
+require_relative 'dev_bootcamper'
+
+class Teacher < DevBootcamper
+  PHASE_DEFAULT = 3
+  TARGET_RAISE_DEFAULT = 1000
+  RATING_TARGET = 90
+  attr_reader :salary, :performance_rating, :target_raise
 
   def initialize(options={})
-    @phase = 3
-    @age = options.fetch(:age, 0)
-    @name = options.fetch(:name, "")
-    @target_raise = 1000
-  end
-
-  def offer_high_five
-    "High five!"
+    super
+    @target_raise = self.class::TARGET_RAISE_DEFAULT
   end
 
   def set_phase(num)
@@ -37,7 +35,7 @@ class Teacher
 
   def set_performance_rating(rating)
     response = ""
-    if rating > 90
+    if rating > self.class::RATING_TARGET
       receive_raise(@target_raise)
       response = "Yay, I'm a great employee!"
     else
