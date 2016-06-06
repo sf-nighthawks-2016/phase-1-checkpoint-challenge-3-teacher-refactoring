@@ -1,6 +1,5 @@
-require_relative 'school', 'teach_module'
-
-class ApprenticeTeacher
+require_relative 'school'
+class ApprenticeTeacher < School
   attr_reader :age, :salary, :phase, :target_raise
   attr_accessor :name
 
@@ -11,8 +10,13 @@ class ApprenticeTeacher
     @phase = 3
   end
 
-  class Apprentice_teacher < School
-  include Teachable, Payable, Receive_raisable, Set_performance_ratable, Set_phasable
+  def teach_stuff
+    response = ""
+    response += "Listen, class, this is how everything works. "
+    response += "*drops crazy knowledge bomb* "
+    response += "... You're welcome."
+    response
+  end
 
   def attend_training_session
     puts "Whoa. I know ruby-fu"
